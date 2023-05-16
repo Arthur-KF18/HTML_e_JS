@@ -1,0 +1,143 @@
+<meta charset="utf-8">
+<title>Aula 04</title>
+<h1>Bem-vindo a aula 04!!</h1>
+
+<script type="text/javascript">
+
+	function pulaLinha() {
+		document.write("<br>");
+	}
+
+	function pula2Linhas(){
+		document.write("<br><br>");
+	}
+
+	function ler(leitura){
+		document.write(leitura);
+		pulaLinha();
+	}
+
+	function ler2(leitura2){
+		document.write(leitura2);
+		pula2Linhas();	 	
+	}
+
+	ler2("Quando quisermos escrever mais de uma função, podemos usa-las em outra função!");
+
+	ler2(" isso quer dixer que podemos criar funções e usa-las, afim de deixar o código mais prático de se escrever e consequentemente");
+	ler2("mais claro de se entender!");
+
+	ler("Usamos uma função chamada ler e nela colocamos uma variavél, que quando for lida, irá retornar o document.write!");
+
+	ler2("sendo dessa forma mais prática de ser feita, além de usar a função pulaLinha, que deixa automático toda vez que pulamos uma linha!!");
+
+
+	ler("quero pular uma linha");
+
+	ler("Pulei uma linha!");	
+
+	ler2("quero pular 2 linhas");	
+
+	ler2("pulei 2 linhas!");
+	
+	ler("<h3> Assim temos nossa praticidade ao criar um código! </h3>")
+
+	ler();
+	ler("a palavra undefined, se refere ao fato de que. ao usar a função ler e não ter parametros, ela não tem definição e acaba por não mostrar nada");
+	pulaLinha();
+
+	
+   /* function fazPegadinha2() {
+        alert("Olá");
+        alert("amiga!");
+        alert("Tá");
+        alert("bastante");
+        alert("entediada?");
+        alert("Em ficar");
+        alert("Clicando em");
+        alert("Ok");
+        alert("né?");
+    }
+
+    fazPegadinha2(); //aqui a função criada é chamada
+	
+
+    function exibeAlerta(mostra){
+    	alert("***" + mostra + "***");
+    }
+
+    var idade1 = 10;
+    var idade2 = 20;
+    var idade3 = 30;
+
+    var totalIdades = idade1 + idade2 + idade3;
+    var mediaIdades = totalIdades/3
+
+    exibeAlerta("Total de idades: " + totalIdades);
+    exibeAlerta("média: " + mediaIdades);
+	*/
+
+    ler("*********************************");
+    ler("BEM-VINDO AO MEU PROGRAMA");
+    ler("*********************************");
+    ler("ELE REALMENTE FUNCIONA");
+	ler("*********************************");
+	ler("EU USEI FUNÇÃO PRA FAZER ISSO");
+
+	pula2Linhas();
+
+
+	ler2("Ou se pode fazer assim: ");
+
+	function pularLinha(){
+		document.write("<br>");
+	}
+
+	function mostra(frase){
+		document.write("***********************");
+		pularLinha();
+		document.write(frase);
+		pularLinha();
+	}
+
+	mostra("eu criei um código");
+	mostra("que se divide sozinho");
+	mostra("Através de funções");
+
+	function exibeTitulo(titulo){
+		document.write("<h1>" + titulo +  "</h1>")
+	}
+
+	function exibeParagrafo(paragrafo) {
+        document.write("<p>" + paragrafo + "</p>");
+        pulaLinha();
+    }
+
+    exibeTitulo("Bem-vindos");
+    exibeParagrafo("Este é um simples programa");
+
+
+    function diferenca(menos){
+    	document.write(menos);
+    }
+
+    var minhaIdade = 18;
+    var idadeIrmao = 15;
+
+    diferenca("minha idade menos a do meu irmão é:" + (minhaIdade - idadeIrmao));
+    pula2Linhas();
+
+    ler("aqui temos um exercício que conta a quantidade de gerações desde o descobrimento do Brasil:");
+
+    function diferencaAnos(Anos) {
+    	document.write(Anos);
+    	pulaLinha();
+    }
+
+    var idadeFilhos = 28
+    var quantidadeAnos = 2022
+    var mediaAnos = (quantidadeAnos - 1500)/idadeFilhos;
+
+    diferencaAnos(Math.round(mediaAnos));
+
+</script>

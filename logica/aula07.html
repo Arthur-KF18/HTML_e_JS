@@ -1,0 +1,218 @@
+<meta charset="utf-8">
+<h1>Bem-vindo a aula 07!!</h1>
+<title>Aula 07</title>
+
+<script type="text/javascript">
+
+function pulaLinha() {
+	document.write("<br>");
+}
+
+function pulaDuasLinhas() {
+	document.write("<br><br>");
+}
+
+function ler(mostra){
+	document.write(mostra);
+	pulaLinha();
+}
+
+function divisoria(div){
+		
+	document.write("------------------------------------------------------------------------------------------------------------------------------------------");
+	pulaDuasLinhas();
+}
+
+ler("Vamos criar um programa que exibe as datas da copa do mundo até uma determinada data: ");
+
+divisoria();
+
+var limite = parseInt(prompt("Entre com a data limite: "));
+var anoCopa = 1930;
+
+while(anoCopa <= limite){
+	ler("teve uma copa em " + anoCopa);
+	anoCopa = anoCopa + 4
+}
+
+divisoria();
+ler("final do programa");
+ler("O que ocorreu foi que o programa calculou de 1930 até a data limite que foi estipulada por nós!");
+ler("Isso nos mostra que podemos criar um ciclo de informações com o while!");
+
+divisoria();
+
+ler("contador de 2 em 2 de 0 a 100: ");
+
+var contador = 2;
+while(contador <= 100){
+	ler(contador);
+	contador = contador + 2
+}
+
+ler("Final");
+
+divisoria();
+ler("contador em ordem descrescente de 20 a 0: ");
+
+var contador2 = 20;
+while(contador2 >= 0){
+	ler(contador2);
+	contador2 = contador2 - 1;
+}
+
+divisoria();
+
+ler("Sistema de Login e Senha: ");
+ler("Aqui foi criado um sistema de login e senha, qeu tem diversas tentativas com um sistema de cadastro já efetuado");
+
+ 	var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    var maximoTentativas = 3;
+    var tentativaAtual = 1;
+
+    while(tentativaAtual<=maximoTentativas){		
+
+    var loginInformado = prompt("Informe seu login");
+    var senhaInformada = prompt("Informe sua senha");
+
+    if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+        alert("Bem-vindo ao sistema " + loginInformado);
+        tentativaAtual = maximoTentativas;
+    } else {
+
+    	if (tentativaAtual == 3) {
+    		alert("numero de tentativas ultrapassado!");
+    	} else {
+    		alert("login inválido.Tente novamente");
+    	}      
+    
+	}
+
+	tentativaAtual = tentativaAtual + 1;
+	}
+
+divisoria();
+
+ler("A partir daqui, entederemos como criar um sistema onde");
+ler("teremos uma tabuada com diversas declarações");
+
+pulaLinha();
+
+ler("tabuada do 7: ");
+var multiplicador = 1;
+while(multiplicador <= 10){
+	ler(7 * multiplicador);
+	multiplicador = multiplicador + 1;	
+}
+
+divisoria();
+ler("Aqui teremos o uso da função for, essa que pode realizar a mesma função do while, porém de maneira diferente");
+
+for (var multiplicador = 1; multiplicador <=10; multiplicador++ ) {
+	ler(7 * multiplicador);
+}
+
+divisoria();
+
+ler("Fazendo a multiplicação novamente, porém, usando while")
+var multiplicador = 1;
+
+	while(multiplicador <= 10){
+		
+		ler(7 * multiplicador);
+		multiplicador = multiplicador + 1;
+	}
+
+divisoria();
+
+//aqui podemos substituir a repetição do mesmo termo por ++
+var total = 0;
+total++; 
+total = total + 1;
+
+
+//exercício 1
+
+for ( var contador = 1; contador <= 10; contador++ ) {
+	alert("contador atual: " + contador)
+
+}
+
+
+//exercício 2
+var i = 0;
+
+	while(i < 10){	
+		alert( "o resultado é: " + (2*i) );
+		i++;
+	}
+
+divisoria();
+
+ler("aqui vamos calcular a média de familiares");
+ler("Nessa parte, o prompt recolhe a quanitidade de familiares e calcula a média");
+
+//Quando colocar a quanitidade, o programa vai salvar a informação e 
+//repetir a pergunta
+var totalFamiliares = parseInt(prompt("Quantidade de Familiares? "));
+
+var numero = 1;
+
+var totalIdades = 0; //para que o valor seja acumulado, é necessário estar fora do while
+
+
+	while( numero <= totalFamiliares){	
+		
+		var idade = parseInt(prompt("Informe a idade do Familiar"));
+		totalIdades = totalIdades + idade;
+		numero++;
+	}
+
+var mediaDasIdades = totalIdades/totalFamiliares;
+ler("A média das idades é: " + mediaDasIdades);
+
+divisoria();
+
+ler("usando o exemplo do chute, onde o número pensado deve ser acertado: ");
+
+var numeroPensado = Math.round(Math.random() * 10);
+var tentativas = 1;
+
+	while( tentativas <= 3){
+		
+		var chute = parseInt(prompt("digite seu chute: "));
+
+		if(chute == numeroPensado) {
+		
+			ler("Você acertou! O número pensado foi: " + numeroPensado);
+			break;
+			
+		}else {	
+		
+			ler("Você errou! O número pensado foi: " + numeroPensado);
+		
+		}
+		
+		tentativas++;
+	}
+	
+divisoria();
+
+ler("Aqui criaremos um código que imprima 10 estrelas, em 3 linhas");
+pulaLinha();
+
+for (var linha = 1; linha <= 3; linha++){
+	
+	for(var coluna = 1; coluna <= 10; coluna++){
+		document.write("*");
+	}
+	pulaLinha();
+}
+
+
+
+
+</script>

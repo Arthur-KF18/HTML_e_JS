@@ -1,0 +1,84 @@
+<meta charset="utf-8">
+<h1>Bem-vindo a aula 06!!</h1>
+<title>Aula 06</title>
+<script type="text/javascript">
+
+function pulaLinha() {
+	document.write("<br>");
+}
+
+function pulaDuasLinhas() {
+	document.write("<br><br>");
+}
+
+function ler(mostra){
+	document.write(mostra);
+	pulaLinha();
+}
+
+function divisoria(div){
+		
+	document.write("------------------------------------------------------------------------------------------------------------------------------------------");
+	pulaDuasLinhas();
+}
+
+ler(" Hoje faremos um programa baseado em Futebol!!");
+
+divisoria();
+
+var nome = prompt("informe o nome do seu time: ");
+
+var vitorias = parseInt(prompt("quantas vitórias houve? "));
+
+var empates = parseInt(prompt("quantes empates houveram? "));
+
+var pontos = (vitorias * 3) + empates;
+
+ler(" Os pontos do " + nome +  " são: " + pontos + " pontos");
+
+// aqui nós iremos colocar uma condição! Ou seja, a menos que o a pontuação seja maior, menor ou igual ao do ano atual, ela exibirá certas condições!!
+
+divisoria();
+
+ler("Programa para soma de convidados e VIP's: ");
+
+var convidados = parseInt(prompt("Número de convidados"));
+var vips = parseInt(prompt("Número de convidados VIP's "));
+
+var total = convidados + vips
+
+ler("O total de convidados é: " + total);
+
+divisoria();
+
+ler("Verificação de variáveis: ");
+
+var a = parseInt("10");
+var b = parseInt("Calopsita");
+var c = parseInt(10);
+
+ler(a);
+ler(b);
+ler(c);
+
+divisoria();
+
+ler("Voltando ao exercício do futebol... ");
+pulaLinha();
+ler("Aqui nós iremos colocar uma condição! Ou seja, a menos que o a pontuação seja maior, menor ou igual ao do ano atual, ela exibirá certas condições!! ");
+
+if (pontos > 28){
+	ler( nome +  " está melhor que o ano passado! ");
+}
+
+if (pontos < 28){
+	ler( nome +  " está pior que o ano passado! ");
+}
+
+if (pontos == 28){
+	ler( nome +  " está igual ao ano passado! ");
+}
+
+
+
+</script>

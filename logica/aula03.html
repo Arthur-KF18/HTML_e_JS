@@ -1,0 +1,172 @@
+<meta charset="utf-8">
+<title>Aula 03</title>
+<h1>Bem-vindo a aula 03!</h1><br>
+
+<script type="text/javascript">
+
+	document.write("Apenas a idade de 3 funcíonários: <br>");
+
+	document.write("Flávio tem: " + (2016 - 1977) + " anos");
+	document.write("<br>");
+	document.write("Joaquim tem: " + (2016 - 1996) + " anos");
+	document.write("<br>");
+	document.write("Pedro tem: " + ( 2016 - 1976) + " anos");
+	document.write("<br> <br>");
+
+	document.write("Caso tenhamos que uma determinada quantidade X de funcíonários, e precisemos trocar o ano de uma única forma: <br><br>");
+
+	if( ano = 2022 ){
+
+	document.write("Flávio tem: " + (ano - 1977) + " anos");
+	document.write("<br>");
+	document.write("Joaquim tem: " + (ano - 1996) + " anos");
+	document.write("<br>");
+	document.write("Pedro tem: " + ( ano - 1976) + " anos");
+	document.write("<br>");
+	document.write("Marcos tem: " + ( ano - 2010) + " anos");
+	document.write("<br>");
+	document.write("Rian tem: " + ( ano - 2003) + " anos");
+	document.write("<br>");
+	document.write("Gabriel tem: " + ( ano - 1999) + " anos");
+	document.write("<br>");
+	document.write("Heitor tem: " + ( ano - 2000) + " anos");
+	document.write("<br>");
+
+	}
+	document.write("<br><br>");
+
+	document.write("Ou podemos escrever da seguinte forma: "  + "<br>");
+
+	var ano1 = 2022
+	document.write("Flávio tem: " + (ano1 - 1977) + " anos");
+	document.write("<br>");
+	document.write("Joaquim tem: " + (ano1 - 1996) + " anos");
+	document.write("<br>");
+
+	document.write(" A diferença é estarmos utilizando VAR e declarando a variável!" + "<br><br>");
+	document.write("sendo assim, podemos variar a foram, já que o algoritimo le cada linha, em partes" + "<br>");
+
+	var ano1 = 2022
+	document.write("aqui pensamos no ano de 202: <br>");
+	document.write("Flávio tem: " + (ano1 - 1977) + " anos");
+	document.write("<br>");
+
+	ano1 = 2021
+	document.write("aqui pensamos no ano de 2021: <br>");
+	document.write("Joaquim tem: " + (ano1 - 1996) + " anos");
+	document.write("<br><br>");
+
+	document.write("exemplo de declaração de variável n de intervalo 1 a 5: <br>");
+
+
+	var n = 1;
+	document.write("O resultado da fórmula é : " + n * (10 / 20) + "<br>"  );
+	
+	n = 2;
+	document.write("O resultado da fórmula é : " + n * (10 / 20) + "<br>"  );
+	
+	n = 3;
+	document.write("O resultado da fórmula é : " + n * (10 / 20) + "<br>"  );
+	
+	n = 4;
+	document.write("O resultado da fórmula é : " + n * (10 / 20) + "<br>"  );
+	
+	n = 5;
+	document.write("O resultado da fórmula é : " + n * (10 / 20) + "<br><br>" );
+
+	document.write("Usando outro var e fazendo 2016 - minhaidade que é a variável: <br>");
+	var minhaidade = 20;
+	document.write("Eu nasci em " + (2016 - minhaidade) + "<br><br>" );
+
+	document.write("verificando os meses sem repetir a variável: <br>");
+	var mes = 6;
+	document.write("Realizei a prova no mes: " + mes + "." + "<br>");
+
+	mes = 7;
+	document.write("Realizei a prova no mes: " + mes + "." + "<br><br>");
+
+	document.write("Realizando uma tabuada de 5: <br><br>");
+
+	var multiplica = 5;
+
+	document.write("5 vezes 1 é " + multiplica * 1 + "<br>");
+    document.write("5 vezes 2 é " + multiplica * 2 + "<br>");
+    document.write("5 vezes 1 é " + multiplica * 3 + "<br>");
+    document.write("5 vezes 2 é " + multiplica * 4 + "<br>");
+    document.write("5 vezes 1 é " + multiplica * 5 + "<br>");
+    document.write("5 vezes 2 é " + multiplica * 6 + "<br>");
+    document.write("5 vezes 1 é " + multiplica * 7 + "<br>");
+    document.write("5 vezes 2 é " + multiplica * 8 + "<br>");
+    document.write("5 vezes 1 é " + multiplica * 9 + "<br>");
+    document.write("5 vezes 2 é " + multiplica * 10 + "<br><br>");
+
+    document.write("tabuada do 8: <br><br>");
+    multiplica = 8;
+
+    document.write("8 vezes 1 é " + multiplica * 1 + "<br>");
+    document.write("8 vezes 2 é " + multiplica * 2 + "<br>");
+    document.write("8 vezes 3 é " + multiplica * 3 + "<br>");
+    document.write("8 vezes 4 é " + multiplica * 4 + "<br>");
+    document.write("8 vezes 5 é " + multiplica * 5 + "<br>");
+    document.write("8 vezes 6 é " + multiplica * 6 + "<br>");
+    document.write("8 vezes 7 é " + multiplica * 7 + "<br>");
+    document.write("8 vezes 8 é " + multiplica * 8 + "<br>");
+    document.write("8 vezes 9 é " + multiplica * 9 + "<br>");
+    document.write("8 vezes 10 é " + multiplica * 10 + "<br><br>");
+
+    var media = (39 + 20 + 40)/3
+    document.write("a média das idades dos funcionários é: " + media);
+    document.write("<br><br>");
+   	document.write("caso queiremos deixar arredondado usamos math.round(), dentro do parenteses colococaremos o var media <br>");
+   	document.write("a média das idades dos funcionários é: " + Math.round(media) + "<br><br>");
+
+   	document.write("agora, usaremos de uma forma mais profissional e organizada: <br>");
+
+   	var idadeFlavio = 39;
+   	var idadeJoaquim = 20;
+   	var idadePedro = 40;
+   	var media2 = (idadeFlavio + idadePedro + idadeJoaquim)/3;
+
+   	document.write("a média das idades dos funcionários é: " + Math.round(media2) + "<br><br>");
+
+   	document.write("podemos definir uma variavel nome e coloca-la com a variável idadeFlavio por exemplo: <br>");
+
+   	var nome = "Flávio" ;
+   	document.write("A idade de " + nome + "é " + idadeFlavio + " anos" + "<br><br>");
+   	document.write(" Assim sendo a estrutura: A idade de + nome + é + idadeFlavio + anos <br><br>");
+
+   	document.write("exercícios simples: <br>");
+
+   	var Linda = 12 ;
+   	var Guaraciara = 15 ;
+   	var Pérola = 13 ;
+   	var mediaIdades = (Linda + Guaraciara + Pérola)/3
+
+   	document.write("a media da idade das filhas de Sandro é: " + Math.round(mediaIdades) + "<br><br>" );
+
+   	var IDADE1 = 10;
+   	var IDADE2 = 20;
+   	var IDADE3 = 12;
+
+   	document.write("a média das idades feita por Gerônimo é: <br>");
+   	document.write((IDADE1 + IDADE2 + IDADE3)/3);
+
+
+   	document.write("<br><br><br>");
+
+   	document.write("Exercício de Cálculo de consumo:<br><br>");
+   	document.write("<h3>Álcool ou Gasolina?</h3>" + "<br>");
+
+   	var tanque = 40;
+   	var caminhoComGasolina = 380;
+   	var caminhoComAlcool = 300;
+   	var consumoDeGasolina = caminhoComGasolina/tanque;
+   	var consumoDeAlcool = caminhoComAlcool/tanque;
+
+   	document.write("A distancia será com gasolina será: " + consumoDeGasolina + " km<br>");
+   	document.write("A distancia em valor aproximado: " + Math.round(consumoDeGasolina) + " km<br><br>");
+
+   	document.write("A distancia será com Álcool será: " + consumoDeAlcool + " km<br>");
+   	document.write("A distancia em valor aproximado: " + Math.round(consumoDeAlcool) + " km<br><br>");
+
+</script>

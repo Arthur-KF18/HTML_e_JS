@@ -1,0 +1,279 @@
+<meta charset="utf-8">
+<h1>Bem-vindo a aula 05!!</h1>
+<title>Aula 05</title>
+<script type="text/javascript">
+
+	function p1() {
+		document.write("<br>");//função de pular 1 linha
+	}
+
+	function p2() {
+		document.write("<br><br>");//função de pular 2 linhas
+	}
+
+	function ler(mostra){
+		document.write(mostra);//impressão em HTML mais a linha pulada
+		p1();
+	}
+
+	function ler2(mostra2){
+		document.write(mostra2);
+		p2();
+	}
+
+	function divisoria(div){
+		
+		document.write("------------------------------------------------------------------------------------------------------------------------------------------");
+		p2();
+	}
+
+	
+	function calculaImc(peso, altura){
+
+		var imc= peso/(altura * altura);
+		ler("- O IMC cálculado é: " + imc);   //cálculo do IMC
+
+	}
+
+	ler("<h2> Cálculo de IMC </h2>");
+	ler2("Nessas linhas abaixo, estamos fazendo o código sem uma função!: ");
+
+	var meuPeso = 83;
+	var minhaAltura = 1.87;
+	var imcMeu = meuPeso/(minhaAltura * minhaAltura);
+
+	ler(" - O meu IMC é "  + Math.round(imcMeu));
+
+	var pesoSamara = 81.2;
+	var alturaSamara = 1.63;
+	var imcSamara = pesoSamara/(alturaSamara * alturaSamara);
+
+	ler2(" - O IMC da Samara é: " + Math.round(imcSamara));
+
+	//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	ler2("Agora iremos fazer o cálculo de IMC através de uma função imc: ");	
+
+	var meuPeso = 83;
+	var minhaAltura = 1.87;
+	calculaImc(meuPeso,minhaAltura);
+
+	var pesoSamara = 81.2;
+	var alturaSamara = 1.63;
+	calculaImc(pesoSamara,alturaSamara);
+
+	p2();
+
+	ler("se quisermos escrever uma função que some os 2 imcs, apenas criamos 2 variáveis, imc1 e imc2, calculamos elas e depois as imprimimos assim: ");
+
+	function somaImc(peso1, altura1, peso2, altura2){
+
+		var imc1= peso1/(altura1 * altura1);
+		var imc2= peso2/(altura2 * altura2);
+		ler("A soma dos IMC's é: " + (imc1 + imc2));//soma do IMC
+	}
+	somaImc(83,1.87,80,1.68);
+	
+	divisoria();
+	
+	ler("Outra maneira de fazer o cálculo: ");
+
+	function calcularImc(peso3, altura3) {
+
+		var imc3 = peso3/(altura3 * altura3);
+		return imc3;
+	}
+
+	var imcA = calcularImc(83, 1.87); //definimos imcA como calcularImc
+	var imcS = calcularImc(80, 1.68); //definimos imcS como calcularImc
+
+	ler(imcA);
+	ler(imcS);
+
+	divisoria();
+
+	ler("um fator interessante é que, não necessariamente precisamos definir uma variavel: ");
+	p1();
+
+	function calc(peso4,altura4){
+
+		return peso4 / (altura4 * altura4);
+	}
+
+	var medida = calc(73,1.73);
+	ler(medida);
+	p1();
+	ler("podemos escrever dessa forma: <br> " + calc);
+
+	divisoria();
+
+	/*
+	aqui tem uma outra forma de fazer o código, de maneira que, fique mais prático, mais profissional, porque não define diversas variaveis auxiliares:
+
+	function calculaImc(altura, peso){
+
+		return peso / (altura * altura);
+	}
+
+	var totalImc = calculaImc(1.71, 73) + calculaImc(1.72, 68);
+
+	ler("a soma é " + totalImc);
+
+	*/
+
+
+	//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	ler("Agora vamos ter um exemplo de função de cálculo: ");
+
+	function somaDoisNumeros(numero1,numero2){
+		ler("a soma de dois números é: " + (numero1 + numero2));
+	}
+
+	somaDoisNumeros(15,30);
+
+	divisoria();
+
+
+	ler("Código que foi gerado independente de qualquer variavél que fosse colocada: ");
+
+	function geraCodigo(letra, numero3, numero4){
+
+		return "GH1022";		 
+	}
+
+	var cod = geraCodigo( "A" , 20, 30);
+	ler(cod);
+
+	divisoria();
+
+	ler("<h3> Interagindo com o usuário: </h3>");
+
+		 function imc(altura5, peso5) {
+		 	return peso5 / (altura5 * altura5);
+	 }
+
+	 var nome = prompt("informe seu nome: ");
+	 var alturaInformada = prompt(nome + ", informe sua altura: ");
+	 var pesoInformado = prompt(nome + ", informe seu peso: ");
+
+	 var imcInformado = imc(alturaInformada, pesoInformado);
+
+	 ler(nome + ", O seu IMC calculado pela função determinada é: " + imcInformado);
+
+	 // Condição para que o IMC a mostra seja verificado e se o entrevistado em questão está saudável: 
+
+	 if (imcInformado < 16.0) {
+
+	 	ler("Magreza Grau 3");
+
+	 }
+
+	  if (imcInformado >= 16.0 && imcInformado <= 16.9) {
+ 
+	 		ler("Magreza Grau 2");
+	 	
+	 }
+
+	  
+	  if (imcInformado >= 17.0 ) {
+
+	 	if (imcInformado <= 18.4 ){
+
+	 		ler("Magreza Grau 1");
+	 	}
+	 }
+
+
+	  if (imcInformado >= 18.5 ) {
+
+	 	if (imcInformado <= 24.9 ){
+
+	 		ler("Eutrofia ou peso ideal");
+	 	}
+	 }
+
+
+	  if (imcInformado >= 25.0 ) {
+
+	 	if (imcInformado <= 29.9 ){
+
+	 		ler("Pré-Obeso");
+	 	}
+	 }
+
+
+	  if (imcInformado >= 30.0 ) {
+
+	 	if (imcInformado <= 34.9 ){
+
+	 		ler("Obesidade Grau 1");
+	 	}
+	 }
+
+	 if (imcInformado >= 35.0 ) {
+
+	 	if (imcInformado <= 39.9 ){
+
+	 		ler("Obesidade Grau 2");
+	 	}
+	 }
+
+	  if (imcInformado > 40.0) {
+
+	 	ler("ObesidadeGrau 3");
+
+	 }
+	 
+	 // Essas condições foram apresentadas na aula 06
+
+	 divisoria();
+
+	ler("Calculo de números escolhidos: ");
+	var numero1 = prompt("Digite o primeiro número");
+    var numero2 = prompt("Digite o segundo número");
+
+    ler("O valor de " + numero1 + " vezes " + numero2 + " é: " + (numero1 * numero2));
+
+    divisoria();
+
+    ler("Outra função de cálculo por exemplo: ");
+
+    function a(num1, num2) {
+        return num1 + num2;
+    }
+
+    function b(num1, num2) {
+        return num1 / num2;
+    }
+
+    var resultado = a(10,20) + b(30,2);
+
+    ler(resultado);
+
+    divisoria();
+
+    ler("Função que mostra um nome personalizado: ");
+
+     function aa(texto) {
+
+        return "(" + texto + ")";
+    }
+
+    function bb(texto) {
+
+        return "@" + texto + "@";
+    }
+
+    function cc(nome, sobrenome) {
+
+        return bb(nome + " " + aa(sobrenome));
+
+    }
+
+    var resultado = cc("Flávio", "Almeida");
+
+    ler(resultado);
+
+    divisoria();
+</script>

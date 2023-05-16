@@ -1,0 +1,59 @@
+<meta charset="utf-8">
+<h1>bem vindo a aula 08!</h1>
+<title>Aula 08</title>
+
+<p>Criando um botão e usando o JavaScript para validação: </p>
+
+<input />
+<button>Compare com meu segredo</button>
+<!-- <button>Exibir texto digitado: </button> -->
+
+
+<script>
+    var segredos = [5, 7, 10, 2];
+    /*O array é o conjunto de números em uma única variável
+    e cada elemento conta a partir de 0*/ 
+
+
+    var input = document.querySelector("input");
+    /* comando que seleciona um elemento html e funciona em JavaScript*/
+
+    function verifica() {
+
+        if (input.value == segredo) {
+            alert("você Acertou");
+        } else {
+            alert("você Errou")
+        }
+
+        input.value = "";
+        input.focus();
+        /* a focus() é uma função que        
+        permite a caixa continuar marcada, mesmo depois dela ter sido respondida*/
+
+
+    }
+
+    var button = document.querySelector("button");
+    /*É através de document.querySelector que podemos ir lá no mundo HTML 
+    e trazer o elemento para o mundo JavaScript para que possamos manipulá-lo*/
+
+    button.onclick = verifica;
+    /* este comando define que, ao cslicarmos no botão, 
+    ele irá validar se acertou ou não o valor colocado no input do HTML */
+
+
+    /*
+    resposta do exercício da aula 08
+    var input = document.querySelector("input");
+
+    function exibeTexto() {
+
+        alert(input.value);
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = exibeTexto;
+
+    */
+</script>

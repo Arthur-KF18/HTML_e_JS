@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>advinhação</title>
+</head>
+
+<script>
+	function pulaLinha() {
+	document.write("<br>");
+}
+
+function pulaDuasLinhas() {
+	document.write("<br><br>");
+}
+
+function ler(mostra){
+	document.write(mostra);
+	pulaLinha();
+}
+
+function divisoria(div){
+		
+	document.write("------------------------------------------------------------------------------------------------------------------------------------------");
+	pulaDuasLinhas();
+}
+
+var numeroPensado = Math.round(Math.random() * 10);
+var chute = parseInt(prompt("digite seu chute: "));
+
+if (chute == numeroPensado) {
+	ler("Você acertou!");
+} else {
+	ler("Você errou, o número pensado foi: " + numeroPensado);
+}
+
+</script>
+
+</html>
+

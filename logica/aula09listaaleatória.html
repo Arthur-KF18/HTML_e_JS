@@ -1,0 +1,104 @@
+<meta charset="utf-8">
+<h1>bem vindo a aula 08!</h1>
+<title>Aula 09</title>
+
+<p>Criando um botão e usando o JavaScript para validação: </p>
+<p>usando de arrays e percorrendo entre os números definidos</p>
+
+<input />
+<button>Compare com meu segredo</button>
+
+<script>
+    function sorteia() {
+        return Math.round(Math.random() * 10);
+    }
+
+    function sorteiaNumeros(quantidade) {
+
+        var segredos = [];
+
+        var numero = 1;
+
+        while (numero <= quantidade) {
+
+            var numeroAleatorio = sorteia();
+
+            if (numeroAleatorio !== 0) {
+
+                var achou = false;
+
+
+                for (var posicao = 0; posicao < segredos.length; posicao++) {
+                    if (segredos[posicao] == numeroAleatorio) {
+                        achou = true;
+                        break
+                    }
+                }
+
+                if (achou == false) {
+                    segredos.push(numeroAleatorio);
+                    numero++;
+                }
+            }
+
+        }
+
+        return segredos
+    }
+
+    /* 
+
+    A função é chamada e tem uma lista vazia, a variável número é criada
+    para saber a quantidade de números que tem que ser gerada, por exemplo:
+    - "Número é menor ou igual a 5?" 
+
+
+    A função ela utiliza o for para verificar se o número aleatório que foi colocado
+    ele já existiu, se ele achar, este número não aparecerá
+
+    Ele impede que exista a duplicata. se o número existir, ele é considerado false
+    e o número é colocado mais um, impedindo que haja repetições
+
+    */
+
+    var segredos = sorteiaNumeros(5); //a função recebe ou gera 5 números aleatórios que não se repetem
+
+    console.log(segredos);
+    //no console dev da página aparece quais itens do array que foram gerados
+
+    /*O array é o conjunto de números em uma única variável
+    e cada elemento conta a partir de 0*/
+
+
+    var input = document.querySelector("input");
+    /* comando que seleciona um elemento html e funciona em JavaScript*/
+    input.focus();
+    /* a focus() é uma função que        
+    permite a caixa continuar marcada, mesmo depois dela ter sido respondida*/
+
+    function verifica() {
+
+        var achou = false
+        for (var posicao = 0; posicao < segredos.length; posicao++) {
+            /*o .lenght retorna a quantidade de elementos que o array tem */
+            if (input.value == segredos[posicao]) {
+                alert("você Acertou");
+                achou = true;
+                break;
+            }
+        }
+        if (achou == false) {
+            alert("Você errou!!")
+        }
+
+        input.value = "";
+    }
+
+    var button = document.querySelector("button");
+    /*É através de document.querySelector que podemos ir lá no mundo HTML 
+    e trazer o elemento para o mundo JavaScript para que possamos manipulá-lo*/
+
+    button.onclick = verifica;
+    /* este comando define que, ao cslicarmos no botão, 
+    ele irá validar se acertou ou não o valor colocado no input do HTML */
+</script>
